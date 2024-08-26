@@ -1,0 +1,27 @@
+# Ignore the node_modules directory
+node_modules/
+
+# Ignore build output
+dist/
+build/
+
+# Ignore environment files
+.env
+
+# Ignore logs
+*.log
+
+# Ignore specific config files
+*.config.js
+
+# Ignore specific directories
+coverage/
+public/
+views/
+
+# Ignore all minified files
+*.min.js
+
+# Ignore package-lock and yarn.lock
+package-lock.json
+yarn.lock
