@@ -5,6 +5,10 @@ const taskschema = new mongoose.Schema({
         type : String ,
         required : true 
     },
+    user : {
+        type : String ,
+        required : true 
+    },
     description : {
         type : String ,
         required : true 
@@ -13,7 +17,7 @@ const taskschema = new mongoose.Schema({
         type : Boolean ,
         default : false
     },
-    createAT : {
+    createAT : {    
         type : Date ,
         default : Date.now
     }

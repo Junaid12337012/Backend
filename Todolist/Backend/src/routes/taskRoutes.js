@@ -19,10 +19,20 @@ router.get('/' , async(req , res)=> {
     } catch (error) {
         res.status(400).json({error : error.message})
     }
+
+});
+// Get specific Task
+router.get('/:id' , async(req , res) => {
+    try{
+        const task = await Task.findByIdAndUpdate(req.params.id, req.body, {new : true})
+        res.status(200).json( task );
+    } catch (error) {
+        res.status(400).json({error : error.message});
+    }
 });
 
 // update Task
-router.get('/:id' , async(req , res) => {
+router.put('/:id' , async(req , res) => {
     try{
         const task = await Task.findByIdAndUpdate(req.params.id, req.body, {new : true})
         res.status(200).json( task );
