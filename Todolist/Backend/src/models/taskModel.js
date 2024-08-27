@@ -1,11 +1,12 @@
 import mongoose from "mongoose";
 
 const taskschema = new mongoose.Schema({
-    title : {
+    
+    user : {
         type : String ,
         required : true 
     },
-    user : {
+    title : {
         type : String ,
         required : true 
     },
@@ -17,10 +18,6 @@ const taskschema = new mongoose.Schema({
         type : Boolean ,
         default : false
     },
-    createAT : {    
-        type : Date ,
-        default : Date.now
-    }
 }, { timestamps : true });
 
 const Task = mongoose.model("Task" , taskschema)
