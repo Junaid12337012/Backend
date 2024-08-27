@@ -1,4 +1,3 @@
-import express from "express";
 import mongoose from "mongoose";
 
 const taskschema = new mongoose.Schema({
@@ -18,8 +17,8 @@ const taskschema = new mongoose.Schema({
         type : Date ,
         default : Date.now
     }
-}, { timestamps : "true" });
+}, { timestamps : true });
 
-const Task = mongoose.model(Task , taskschema)
+const Task = mongoose.model("Task" , taskschema)
 
 export default Task;
